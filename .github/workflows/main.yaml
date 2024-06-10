@@ -20,12 +20,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build
-      run: npm run build
-
-    - name: Deploy to gh pages
-      run: |
-        npx angular-cli-ghpages --dir=dist/taras
+    - name: Build and deploy
+      run: npm run deploy
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
