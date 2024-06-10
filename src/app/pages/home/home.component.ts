@@ -1,3 +1,4 @@
+import {NgOptimizedImage} from '@angular/common';
 import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {LOGIN} from '../../models/utils/constants.utils';
@@ -6,7 +7,9 @@ import {StorageService} from '../../services/storage/storage.service';
 @Component({
   selector: 'tn-home',
   standalone: true,
-  imports: [],
+  imports: [
+    NgOptimizedImage
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

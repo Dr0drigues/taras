@@ -17,5 +17,10 @@ export const routes: Routes = [
     path: 'wait',
     pathMatch: 'full',
     loadComponent: async () => (await import('./pages/wait/wait.component')).WaitComponent,
+  },
+  {
+    path: 'coffee',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/coffee/coffee.component')).CoffeeComponent,
   }
 ];
