@@ -1,20 +1,12 @@
 import {NgForOf, NgOptimizedImage} from '@angular/common';
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 import {AnimatedImage, Image, StaticImage} from '../../models/sequence.model';
 
 
 @Component({
   selector: 'tn-image',
-  template: `
-    @if (isStaticImage(image)) {
-      <img [ngSrc]="image.file" alt="image.file" fill>
-    } @else if (isAnimatedImage(image)) {
-      <img [ngSrc]="currentFile" alt="file" fill>
-    }
-    @if (image.soundEffect) {
-      <audio [src]="image.soundEffect" autoplay></audio>
-    }
-  `,
+  templateUrl: './image.component.html',
   imports: [
     NgForOf,
     NgOptimizedImage
@@ -25,6 +17,9 @@ export class ImageComponent implements OnInit, OnDestroy {
   private _image: Image;
   currentFile: string;
   private intervalId: number;
+
+  constructor(private readonly router: Router) {
+  }
 
   @Input()
   set image(image: Image) {
@@ -39,16 +34,16 @@ export class ImageComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-  if (this.isAnimatedImage(this.image)) {
-    let index = 0;
-    const duration = this.image.duration || 1000; // Utilisez une valeur par défaut si duration est undefined
-    this.intervalId = setInterval(() => {
-      index = (index + 1) % (this.image as AnimatedImage).files.length;
-      this.currentFile = (this.image as AnimatedImage).files[index];
-      console.log('Current file:', this.currentFile); // Ajout du log de débogage
-    }, duration);
+    if (this.isAnimatedImage(this.image)) {
+      let index = 0;
+      const duration = this.image.duration || 1000; // Utilisez une valeur par défaut si duration est undefined
+      this.intervalId = setInterval(() => {
+        index = (index + 1) % (this.image as AnimatedImage).files.length;
+        this.currentFile = (this.image as AnimatedImage).files[index];
+        console.log('Current file:', this.currentFile); // Ajout du log de débogage
+      }, duration);
+    }
   }
-}
 
   ngOnDestroy() {
     if (this.intervalId) {
@@ -62,5 +57,9 @@ export class ImageComponent implements OnInit, OnDestroy {
 
   isAnimatedImage(image: Image): image is AnimatedImage {
     return (image as AnimatedImage).files !== undefined;
+  }
+
+  public goTo(nextSequence: string) {
+    this.router.navigate([nextSequence]);
   }
 }

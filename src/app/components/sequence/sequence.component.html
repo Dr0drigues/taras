@@ -1,0 +1,9 @@
+<div (click)="nextImage()">
+  @for (image of sequence.images; track image.id; let i = $index) {
+    @if (currentIndex === i) {
+      <tn-image [image]="image"></tn-image>
+    }
+  }
+
+  <tn-music [music]="sequence.music"></tn-music>
+</div>

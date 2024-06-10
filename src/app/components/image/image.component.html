@@ -1,0 +1,27 @@
+@if (image.choices) {
+  <div class="flex flex-col fixed top w-full bg-white z-30">
+    @if (image.title) {
+      <h1 class="m-auto">{{ image.title }}</h1>
+    }
+
+    <div class="flex flex-row">
+      @for (choice of image.choices; track image.id) {
+        <button
+          (click)="goTo(choice.nextSequence)"
+          class="m-auto p-2 bg-gray-200 rounded-md shadow-md hover:bg-gray-300"
+        >
+          {{ choice.buttonLabel }}
+        </button>
+      }
+    </div>
+  </div>
+}
+
+@if (isStaticImage(image)) {
+  <img [ngSrc]="image.file" alt="image.file" fill>
+} @else if (isAnimatedImage(image)) {
+  <img [ngSrc]="currentFile" alt="file" fill>
+}
+@if (image.soundEffect) {
+  <audio [src]="image.soundEffect" autoplay></audio>
+}
