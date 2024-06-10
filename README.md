@@ -1,4 +1,4 @@
-# Taras
+# Taras - ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white) https://dr0drigues.github.io/taras/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
 

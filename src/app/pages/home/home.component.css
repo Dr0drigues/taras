@@ -1,0 +1,82 @@
+body {
+  background-color: #1d1b2b; /* Background color similar to the image */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  color: #ff4d4d; /* Text color matching the buttons */
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+  color: #ff4d4d;
+  letter-spacing: 0.2em;
+  margin-bottom: 50px;
+}
+
+small {
+  font-size: 10px;
+  color: #ff4d4d;
+}
+
+button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 20px 40px;
+  font-size: 24px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1a1a;
+}
+
+.Theo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 50%;
+  height: auto;
+}
+
+.Nara{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 50%;
+  height: auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer a {
+  color: #ff4d4d;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff1a1a;
+}
