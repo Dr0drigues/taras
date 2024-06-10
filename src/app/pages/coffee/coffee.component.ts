@@ -19,27 +19,27 @@ export class CoffeeComponent {
     sequence: {
       images: [
         {
-          file: '/sequences/coffee/img/1.png',
-          soundEffect: '/sequences/coffee/sound/copains_copines.m4a'
+          file: 'sequences/coffee/img/1.png',
+          soundEffect: 'sequences/coffee/sound/copains_copines.m4a'
         }, {
-          file: '/sequences/coffee/img/2.png'
+          file: 'sequences/coffee/img/2.png'
         }, {
-          file: '/sequences/coffee/img/3.png'
+          file: 'sequences/coffee/img/3.png'
         },
         {
           files: [
-            '/sequences/coffee/img/4.png',
-            '/sequences/coffee/img/5.png'
+            'sequences/coffee/img/4.png',
+            'sequences/coffee/img/5.png'
           ],
           duration: 1000
         },
         {
-          file: '/sequences/coffee/img/choice.png'
+          file: 'sequences/coffee/img/choice.png'
         }
       ],
       music: {
         name: 'Blues',
-        file: '/sequences/coffee/sound/blues.mp3'
+        file: 'sequences/coffee/sound/blues.mp3'
       }
     },
     choices: []
