@@ -62,6 +62,26 @@ export const routes: Routes = [
     loadComponent: async () => (await import('./pages/potmaking/potmaking-second.component')).PotmakingSecondComponent
   },
   {
+    path: 'resto',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/resto/resto.component')).RestoComponent
+  },
+  {
+    path: 'resto-theo',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/resto/theo/resto-theo.component')).RestoTheoComponent
+  },
+  {
+    path: 'resto-nara',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/resto/nara/resto-nara.component')).RestoNaraComponent
+  },
+  {
+    path: 'resto-noone',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/resto/noone/resto-noone.component')).RestoNooneComponent
+  },
+  {
     path: 'ending-gay',
     pathMatch: 'full',
     loadComponent: async () => (await import('./pages/ending/gay/gay.ending')).GayEndingComponent
@@ -70,5 +90,15 @@ export const routes: Routes = [
     path: 'ending-pls',
     pathMatch: 'full',
     loadComponent: async () => (await import('./pages/ending/pls/pls.ending')).PLSEndingComponent
-  }
+  },
+  {
+    path: 'ending-cat',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/ending/cat/cat.ending')).CatEndingComponent
+  },
+  {
+    path: 'ending-mail',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/ending/envelope/envelope.component')).EnvelopeComponent
+  },
 ];

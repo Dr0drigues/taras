@@ -1,5 +1,5 @@
 @if (image.choices) {
-  <div class="flex flex-col fixed top w-full bg-white z-30">
+  <div class="flex flex-col fixed top w-full z-30 bg-pink-300">
     @if (image.title) {
       <h1 class="m-auto">{{ image.title }}</h1>
     }
@@ -8,7 +8,7 @@
       @for (choice of image.choices; track image.id) {
         <button
           (click)="goTo(choice.nextSequence)"
-          class="m-auto p-2 bg-gray-200 rounded-md shadow-md hover:bg-gray-300"
+          class="m-auto p-2 bg-pink-500 text-white rounded-md shadow-md hover:bg-gray-300"
         >
           {{ choice.buttonLabel }}
         </button>
@@ -17,15 +17,15 @@
   </div>
 }
 
-<div class="flex flex-row fixed top w-full bg-white z-10 h-screen">
+<div class="flex flex-row fixed top bg-pink-300 z-10 h-screen w-full">
   @if (image.text) {
     <p class="m-auto fixed right-0 w-2/4 z-20 text-12" [innerHTML]="image.text"></p>
   }
   @if (isStaticImage(image)) {
-    <div class="h-auto w-full" style="background-image: url({{ image.file }}); background-size: contain; background-repeat: no-repeat; background-position: center;" [ngClass]="{'fixed left-0 img-50': image.text}"></div>
+    <div class="h-auto w-full" style="background-image: url({{ image.file }}); background-size: contain; background-repeat: no-repeat; background-position: center;" [ngClass]="{'img-50': image.text || half, 'fixed left-0': left, 'fixed right-0': right}"></div>
 
   } @else if (isAnimatedImage(image)) {
-    <div class="h-auto w-full" style="background-image: url({{ currentFile }}); background-size: contain; background-repeat: no-repeat; background-position: center;" [ngClass]="{'fixed left-0 img-50': image.text}"></div>
+    <div class="h-auto w-full" style="background-image: url({{ currentFile }}); background-size: contain; background-repeat: no-repeat; background-position: center;" [ngClass]="{'img-50': image.text || half,  'fixed left-0': left, 'fixed right-0': right}"></div>
   }
   @if (image.soundEffect) {
     <audio [src]="image.soundEffect" autoplay></audio>

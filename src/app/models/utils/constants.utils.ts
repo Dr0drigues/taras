@@ -38,3 +38,24 @@ export const POTMAKING_ENDING_TEXT = `
   Ainsi, dans la douceur et la chaleur de Marcq-en Baroeul, Théo et Romain trouvèrent non seulement la passion de l'argile, mais surtout celle de leurs cœurs entrelacés.
 </p>
 `;
+
+export const CAT_ENDING_TEXT = `
+<p>
+Nara était une femme à la fois mystérieuse et chaleureuse, connue dans son village pour son amour incommensurable pour les chats. Depuis son enfance, elle avait toujours eu une affinité particulière avec ces créatures élégantes et indépendantes. Sa petite maison, perchée au sommet d'une colline, était un véritable refuge pour les félins abandonnés et errants.
+<br />
+Les habitants de son village avaient pris l'habitude de voir Nara se promener, suivie d'une ribambelle de chats de toutes tailles et couleurs. Pour certains, c'était un spectacle étrange, mais pour ceux qui connaissaient Nara, c'était une manifestation de sa compassion infinie et de son cœur d'or. Elle avait ce don singulier de comprendre et de communiquer avec les chats, les apaisant par sa simple présence.
+<br />
+Un jour, alors qu'elle se rendait au marché pour acheter de la nourriture pour ses protégés, les gens du village remarquèrent une nouvelle lumière dans ses yeux. Il semblait que Nara était en paix avec elle-même, trouvant son bonheur dans le quotidien simple et riche en émotions qu'elle partageait avec ses compagnons félins. La maison de Nara, avec son jardin luxuriant et ses coins tranquilles, était devenue un sanctuaire non seulement pour les chats, mais aussi pour toute âme en quête de réconfort.
+<br />
+Les années passèrent, et la maison de Nara devint non seulement un refuge pour les chats, mais aussi un lieu de sérénité et de réconfort pour les gens du village. Les enfants aimaient venir écouter les histoires que Nara racontait sur chacun de ses chats, tandis que les adultes trouvaient en elle une confidente sage et compréhensive. La connexion unique entre Nara et ses compagnons félins touchait tous ceux qui avaient la chance de la connaître.
+<br />
+À mesure que Nara vieillissait, son amour pour les chats ne faisait que croître. Elle savait que sa vie était pleinement accomplie, entourée de ces créatures qu'elle aimait tant. Un soir, alors qu
+elle s'endormait dans son fauteuil préféré, entourée de ses amis à quatre pattes, elle ressentit une paix profonde. Ses chats, sentant quelque chose de différent, se blottirent encore plus près d'elle, comme pour lui tenir compagnie dans ses derniers moments.
+<br />
+Nara s'éteignit paisiblement, avec un sourire sur les lèvres, consciente d'avoir vécu une vie riche et pleine de sens. Le lendemain, les villageois trouvèrent la maison silencieuse mais imprégnée d'une douce quiétude. Les chats, en deuil de leur amie bien-aimée, restèrent près de son corps, veillant sur elle une dernière fois.
+<br />
+Profondément touchés par la perte de Nara, les villageois décidèrent de continuer son œuvre en prenant soin des chats et en maintenant le refuge ouvert. Ils firent de la maison de Nara un sanctuaire dédié à sa mémoire, où les chats et les amoureux des félins pouvaient trouver refuge et consolation.
+<br />
+Ainsi, Nara, même après sa mort, continua à inspirer et à apporter du bonheur, son esprit vivant à travers chaque chat qu'elle avait sauvé et chaque personne touchée par son histoire. Et dans ce coin tranquille du Nord, la légende de Nara et de ses milliers de chats perdura, un témoignage éternel de l'amour et de la compassion.
+</p>
+`

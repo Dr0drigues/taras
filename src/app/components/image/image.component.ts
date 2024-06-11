@@ -29,6 +29,12 @@ export class ImageComponent implements OnInit, OnDestroy {
   private _image: Image;
   currentFile: string;
   private intervalId: number;
+  @Input()
+  half: boolean;
+  @Input()
+  left = true;
+  @Input()
+  right = false;
 
   constructor(private readonly router: Router) {
   }
