@@ -17,11 +17,16 @@
   </div>
 }
 
-@if (isStaticImage(image)) {
-  <img [ngSrc]="image.file" alt="image.file" fill>
-} @else if (isAnimatedImage(image)) {
-  <img [ngSrc]="currentFile" alt="file" fill>
-}
-@if (image.soundEffect) {
-  <audio [src]="image.soundEffect" autoplay></audio>
-}
+<div class="flex flex-row fixed top w-full bg-white z-10 h-screen">
+  @if (image.text) {
+    <p class="m-auto fixed right-0 w-2/4 z-20">{{ image.text }}</p>
+  }
+  @if (isStaticImage(image)) {
+    <img [ngSrc]="image.file" [alt]="image.file" [ngClass]="{'fixed left-0 img-50': image.text}" fill>
+  } @else if (isAnimatedImage(image)) {
+    <img [ngSrc]="currentFile" [alt]="currentFile" fill>
+  }
+  @if (image.soundEffect) {
+    <audio [src]="image.soundEffect" autoplay></audio>
+  }
+</div>

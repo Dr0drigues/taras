@@ -10,6 +10,8 @@ export interface StaticImage {
   file: string;
   soundEffect?: string; // Son déclenché à l'affichage de l'image
   choices?: ImageChoice[]; // Choix associé à l'image
+  text?: string;
+  nextSequence?: string; // Pointe vers une Sequence
 }
 
 export interface AnimatedImage {
@@ -19,6 +21,8 @@ export interface AnimatedImage {
   soundEffect?: string; // Son déclenché à l'affichage de l'image
   duration: number; // Durée de l'animation en millisecondes
   choices?: ImageChoice[]; // Choix associé à l'image
+  text?: string;
+  nextSequence?: string; // Pointe vers une Sequence
 }
 
 export type Image = StaticImage | AnimatedImage;
