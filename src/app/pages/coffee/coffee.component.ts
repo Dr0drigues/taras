@@ -19,29 +19,46 @@ export class CoffeeComponent {
     sequence: {
       images: [
         {
+          id: 'coffee-00',
           file: 'sequences/coffee/img/1.png',
           soundEffect: 'sequences/coffee/sound/copains_copines.m4a'
         }, {
+          id: 'coffee-01',
           file: 'sequences/coffee/img/2.png'
         }, {
+          id: 'coffee-02',
           file: 'sequences/coffee/img/3.png'
         },
         {
+          id: 'coffee-03',
           files: [
             'sequences/coffee/img/4.png',
             'sequences/coffee/img/5.png'
           ],
-          duration: 1000
+          duration: 250
         },
         {
-          file: 'sequences/coffee/img/choice.png'
+          id: 'coffee-04',
+          title: 'Théo voit au loin:',
+          file: 'sequences/coffee/img/choice.png',
+          choices: [
+            {
+              id: 'coffee-04-choice-00',
+              buttonLabel: 'Les lèvres pulpeuses d\'un charmant jeune homme',
+              nextSequence: 'coffee/bad'
+            },
+            {
+              id: 'coffee-04-choice-01',
+              buttonLabel: 'La douce crinière de la femme qui accompagne Mr "Copain, copine"',
+              nextSequence: 'coffee/sequel'
+            }
+          ]
         }
       ],
       music: {
         name: 'Blues',
         file: 'sequences/coffee/sound/blues.mp3'
       }
-    },
-    choices: []
+    }
   };
 }
