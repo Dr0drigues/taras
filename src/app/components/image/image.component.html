@@ -19,7 +19,7 @@
 
 <div class="flex flex-row fixed top w-full bg-white z-10 h-screen">
   @if (image.text) {
-    <p class="m-auto fixed right-0 w-2/4 z-20">{{ image.text }}</p>
+    <p class="m-auto fixed right-0 w-2/4 z-20 text-12" [innerHTML]="image.text"></p>
   }
   @if (isStaticImage(image)) {
     <div class="h-auto w-full" style="background-image: url({{ image.file }}); background-size: contain; background-repeat: no-repeat; background-position: center;" [ngClass]="{'fixed left-0 img-50': image.text}"></div>

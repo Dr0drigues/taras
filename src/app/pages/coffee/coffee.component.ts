@@ -45,7 +45,7 @@ export class CoffeeComponent {
             {
               id: 'coffee-04-choice-00',
               buttonLabel: 'Les lèvres pulpeuses d\'un charmant jeune homme',
-              nextSequence: 'ending/bad/coffee'
+              nextSequence: 'coffee/bad'
             },
             {
               id: 'coffee-04-choice-01',

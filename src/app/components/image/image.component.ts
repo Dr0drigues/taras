@@ -10,7 +10,11 @@ import {AnimatedImage, Image, StaticImage} from '../../models/sequence.model';
   styles: [`
     .img-50 {
       width: 50% !important;
-      height: auto;
+      height: 100vh;
+    }
+
+    .text-12 {
+      font-size: 0.85rem;
     }
   `],
   imports: [
