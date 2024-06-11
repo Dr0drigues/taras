@@ -1,4 +1,4 @@
-import {NgForOf, NgIf} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {Component, Input} from '@angular/core';
 import {Router} from '@angular/router';
 import {Sequence} from '../../models/sequence.model';
@@ -11,8 +11,7 @@ import {MusicComponent} from '../music/music.component';
   imports: [
     ImageComponent,
     MusicComponent,
-    NgForOf,
-    NgIf
+    CommonModule
   ],
   standalone: true
 })

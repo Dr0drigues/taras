@@ -1,4 +1,4 @@
-import {NgClass, NgForOf, NgOptimizedImage, NgStyle} from '@angular/common';
+import {CommonModule, NgClass, NgOptimizedImage, NgStyle} from '@angular/common';
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AnimatedImage, Image, StaticImage} from '../../models/sequence.model';
@@ -14,10 +14,10 @@ import {AnimatedImage, Image, StaticImage} from '../../models/sequence.model';
     }
   `],
   imports: [
-    NgForOf,
     NgOptimizedImage,
     NgClass,
-    NgStyle
+    NgStyle,
+    CommonModule
   ],
   standalone: true
 })

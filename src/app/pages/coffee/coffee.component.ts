@@ -35,7 +35,7 @@ export class CoffeeComponent {
             'sequences/coffee/img/4.png',
             'sequences/coffee/img/5.png'
           ],
-          duration: 1000
+          duration: 250
         },
         {
           id: 'coffee-04',

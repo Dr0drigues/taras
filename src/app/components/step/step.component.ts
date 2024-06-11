@@ -1,4 +1,4 @@
-import {NgForOf} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import { Component, Input } from '@angular/core';
 import {Step} from '../../models/sequence.model';
 import {SequenceComponent} from '../sequence/sequence.component';
@@ -11,7 +11,7 @@ import {SequenceComponent} from '../sequence/sequence.component';
   standalone: true,
   imports: [
     SequenceComponent,
-    NgForOf
+    CommonModule
   ]
 })
 export class StepComponent {

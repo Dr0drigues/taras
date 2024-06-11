@@ -5,7 +5,7 @@ import {Step} from '../../models/sequence.model';
 @Component({
   selector: 'tn-sms',
   template: `
-    <tn-step [step]=""></tn-step>
+    <tn-step [step]="step"></tn-step>
   `,
   imports: [
     StepComponent
@@ -26,7 +26,7 @@ export class SmsComponent {
           file: 'sequences/sms/img/2.png'
         }, {
           id: 'sms-02',
-          file: 'sequences/sms/img/3.png'
+          file: 'sequences/sms/img/3.jpg'
         },
         {
           id: 'sms-03',
@@ -35,7 +35,7 @@ export class SmsComponent {
         {
           id: 'sms-04',
           file: 'sequences/sms/img/5.png',
-          nextSequence: 'ending/gay'
+          nextSequence: '/ending-gay'
         }
       ],
       music: {

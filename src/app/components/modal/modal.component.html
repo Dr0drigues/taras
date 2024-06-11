@@ -1,0 +1,8 @@
+<p-dialog [modal]="true" [(visible)]="visible" [draggable]="false" [styleClass]="'w-50'">
+  <div class="flex align-items-center gap-3 mb-3">
+    <p>
+      {{ text }}
+    </p>
+  </div>
+  <p-button (onClick)="goHome()" [label]="close"></p-button>
+</p-dialog>

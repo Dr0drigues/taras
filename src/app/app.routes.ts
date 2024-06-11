@@ -4,11 +4,6 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadComponent: async () => (await import('./pages/login/login.component')).LoginComponent
-  },
-  {
-    path: 'home',
-    pathMatch: 'full',
     loadComponent: async () => (await import('./pages/home/home.component')).HomeComponent
   },
   {
@@ -25,5 +20,15 @@ export const routes: Routes = [
     path: 'coffee/sequel',
     pathMatch: 'full',
     loadComponent: async () => (await import('./pages/coffee/sequel/coffee-sequel.component')).CoffeeSequelComponent
+  },
+  {
+    path: 'sms',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/sms/sms.component')).SmsComponent
+  },
+  {
+    path: 'ending-gay',
+    pathMatch: 'full',
+    loadComponent: async () => (await import('./pages/ending/gay/gay.ending')).GayEndingComponent
   }
 ];
