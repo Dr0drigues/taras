@@ -1,3 +1,4 @@
+import {NgClass} from '@angular/common';
 import {Component, HostListener} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
@@ -8,11 +9,11 @@ import { StorageService } from '../../services/storage/storage.service';
   selector: 'tn-login',
   templateUrl: './login.component.html',
   standalone: true,
-  imports: [RouterLink, FormsModule],
+  imports: [RouterLink, FormsModule, NgClass],
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  name = '';
+  name: string;
 
   @HostListener('document:keydown.enter', ['$event'])
   onEnter(event: KeyboardEvent): void {
