@@ -1,12 +1,28 @@
+export interface ImageChoice {
+  id: string;
+  buttonLabel: string;
+  nextSequence: string; // Pointe vers une Sequence
+}
+
 export interface StaticImage {
+  id: string;
+  title?: string;
   file: string;
   soundEffect?: string; // Son déclenché à l'affichage de l'image
+  choices?: ImageChoice[]; // Choix associé à l'image
+  text?: string;
+  nextSequence?: string; // Pointe vers une Sequence
 }
 
 export interface AnimatedImage {
+  id: string;
+  title?: string;
   files: string[]; // Tableau de fichiers d'images pour l'animation
   soundEffect?: string; // Son déclenché à l'affichage de l'image
   duration: number; // Durée de l'animation en millisecondes
+  choices?: ImageChoice[]; // Choix associé à l'image
+  text?: string;
+  nextSequence?: string; // Pointe vers une Sequence
 }
 
 export type Image = StaticImage | AnimatedImage;
@@ -21,15 +37,8 @@ export interface Sequence {
   music: Music;
 }
 
-export interface Choice {
-  name: string;
-  buttonLabel: string;
-  nextSequence: Sequence; // Pointe vers une Sequence
-}
-
 export interface Step {
   index: number;
   name?: string;
   sequence: Sequence;
-  choices?: Choice[];
 }
